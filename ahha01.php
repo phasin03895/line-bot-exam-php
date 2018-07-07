@@ -22,10 +22,10 @@ if (!is_null($events['events'])) {
       $nk=0;
       $nl=0;
       $nchk=0;
-	$nonb[100]={};
+      $nonb[100]={}
 
-      $nl=strlen($non);
-        for($ni;$ni<$nl;$ni++)
+      $nl=strlen($event['message']['text']);
+        for($ni=0;$ni<$nl;$ni++)
         {
             if($nchk==0)
             {
