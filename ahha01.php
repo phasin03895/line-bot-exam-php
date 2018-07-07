@@ -22,7 +22,8 @@ if (!is_null($events['events'])) {
      $text = "hello";
         for($ni=0;$ni<$nl;$ni++)
         {
-		 $text .="\nhow are you";
+		 $text .="\n";
+		$text .=$event['message']['text'][$ni];
         }
 
 
