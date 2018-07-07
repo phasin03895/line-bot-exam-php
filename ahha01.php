@@ -26,7 +26,7 @@ if (!is_null($events['events'])) {
 			
 			  break;
       
-      case "้hello":  
+      case "hello":  
       
         $text = "hello";
 			
