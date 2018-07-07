@@ -16,6 +16,21 @@ $i = $i+$split_length;
 return $array;
 }
 
+function getStrLenTH($string)
+{
+  $array = getMBStrSplit($string);
+  $count = 0;
+  foreach($array as $value)
+  {
+    $ascii = ord(iconv("UTF-8", "TIS-620", $value ));
+    if( !( $ascii == 209 ||  ($ascii >= 212 && $ascii <= 218 ) || ($ascii >= 231 && $ascii <= 238 )) )
+    {
+      $count += 1;
+    }
+  }
+  return $count;
+}
+
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 
@@ -34,7 +49,7 @@ if (!is_null($events['events'])) {
 
       $non = getMBStrSplit($event['message']['text']);
       $ni=0;
-     $nl=strlen($non);
+     $nl=getStrLenTH($event['message']['text']);
      $text = "hello";
         for($ni=0;$ni<$nl;$ni++)
         {
