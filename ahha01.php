@@ -18,7 +18,7 @@ if (!is_null($events['events'])) {
 
       
       $ni=0;
-     $nl=strlen($event['message']['text'])
+     $nl=strlen($event['message']['text']);
      $text = "hello";
         for($ni=0;$ni<$nl;$ni++)
         {
