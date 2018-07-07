@@ -25,6 +25,7 @@ if (!is_null($events['events'])) {
 		 $text .="\n";
 		$text .=$event['message']['text'][$ni];
         }
+		$text .= $nl;
 
 
         
