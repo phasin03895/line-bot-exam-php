@@ -49,7 +49,7 @@ if (!is_null($events['events'])) {
 			
 			
 		}
-		else{
+		elseif($event['type'] == 'message' && $event['message']['type'] == 'picture'){
 			// Get text sent
 			$text = "phasin Aumwong";
 			// Get replyToken
