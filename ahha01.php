@@ -129,4 +129,4 @@ if (!is_null($events['events'])) {
 
 	}
 }
-echo "OK1234567899876543210";
+echo "OK12";
