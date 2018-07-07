@@ -16,56 +16,20 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 
-      $non[100]=$event['message']['text'];
+      
       $ni=0;
-      $nj=0;
-      $nk=0;
-      $nl=0;
-      $nchk=0;
-      $nonb[100]={}
-
-      $nl=strlen($event['message']['text']);
+     $nl=strlen($event['message']['text'])
+     $text = "hello";
         for($ni=0;$ni<$nl;$ni++)
         {
-            if($nchk==0)
-            {
-                if($non[$ni]==' ')
-                {
-                    $nchk=1;
-                }
-            }
-            else if($nchk==1)
-            {
-                if($non[$ni]!=' ')
-                {
-                  $nonb[$nj]=$non[$ni];
-                  $nj++;
-
-                }
-              }
+		 $text .="\nhow are you";
         }
 
 
+        
 
 
-      switch($nonb)
-      {
-      case "สวัสดี":
-
-        $text = "สวัสดี";
-
-			  $text .="\nสบายดีไหม";
-
-			  break;
-
-      case "้hello":
-
-        $text = "hello";
-
-			  $text .="\nhow are you";
-
-			  break;
-      }
+      
 
 
 			$messages = [
