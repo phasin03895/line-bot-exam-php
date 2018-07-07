@@ -1,4 +1,20 @@
 <?php // callback.php
+function getMBStrSplit($string, $split_length = 1){
+mb_internal_encoding('UTF-8');
+
+mb_regex_encoding('UTF-8');
+
+$split_length = ($split_length <= 0) ? 1 : $split_length;
+$mb_strlen = mb_strlen($string, 'utf-8');
+$array = array();
+$i = 0;
+while($i < $mb_strlen)
+{
+$array[] = mb_substr($string, $i, $split_length);
+$i = $i+$split_length;
+}
+return $array;
+}
 
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
@@ -16,15 +32,16 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 
-      
+      $non = getMBStrSplit($event['message']['text']);
       $ni=0;
-     $nl=strlen($event['message']['text']);
+     $nl=strlen($non);
      $text = "hello";
-       /* for($ni=0;$ni<$nl;$ni++)
+        for($ni=0;$ni<$nl;$ni++)
         {
 		 $text .="\n";
-		$text .=$event['message']['text'][$ni];
-        }*/
+		$text .=$non[$ni];
+        }
+			$text .="\n";
 		$text .= $nl;
 
 
