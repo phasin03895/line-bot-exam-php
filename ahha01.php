@@ -25,7 +25,7 @@ if (!is_null($events['events'])) {
 			  $text .="\nสบายดีไหม";
 			
 			  break;
-      }
+      
       case "้hello":  
       
         $text = "hello";
