@@ -13,6 +13,7 @@ $content = file_get_contents('php://input');
 $events = json_decode($content, true);
 // Validate parsed JSON data
 function getMBStrSplit($string, $split_length = 1){
+	echo"\nfun 1 test";
 mb_internal_encoding('UTF-8');
 
 mb_regex_encoding('UTF-8');
@@ -31,6 +32,7 @@ return $array;
 
 function getStrLenTH($string)
 {
+	echo"fun 2 test";
   $array = getMBStrSplit($string);
   $count = 0;
   foreach($array as $value)
@@ -43,6 +45,7 @@ function getStrLenTH($string)
   }
   return $count;
 }
+echo"\nunderfunc";
 if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
