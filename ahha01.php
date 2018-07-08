@@ -12,7 +12,10 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
-function getMBStrSplit($string, $split_length = 1){
+
+echo"\nunderfunc";
+if (!is_null($events['events'])) {
+	function getMBStrSplit($string, $split_length = 1){
 	echo"\nfun 1 test";
 mb_internal_encoding('UTF-8');
 
@@ -45,8 +48,11 @@ function getStrLenTH($string)
   }
   return $count;
 }
-echo"\nunderfunc";
-if (!is_null($events['events'])) {
+	
+	
+	
+	
+	
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
