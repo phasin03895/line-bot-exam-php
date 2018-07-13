@@ -17,6 +17,24 @@
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
         replyMsg($arrayHeader,$arrayPostData);
     }
+    else if($message == "สูตร กฎรวมแก็ส"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "P1V1/T1 = P2V2/T2";
+      replyMsg($arrayHeader,$arrayPostData);
+    }
+    else if($message == "สูตร การขยายตัวของของแข็ง"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "ΔL = L0αΔT\n ΔA = P0ɣΔT\n ΔV = V0βΔT";
+      replyMsg($arrayHeader,$arrayPostData);
+    }
+    else if($message == "สูตร อุณหพลศาสตร์"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "Q = McΔt\n Q = mL ";
+      replyMsg($arrayHeader,$arrayPostData);
+    }
     #ตัวอย่าง Message Type "Sticker"
     else if($message == "ฝันดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
