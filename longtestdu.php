@@ -25,7 +25,7 @@
         $arrayPostData['messages'][4]['type'] = "text";
         $arrayPostData['messages'][4]['text'] = "5555(แห้งๆ)";
         replyMsg($arrayHeader,$arrayPostData);
-        replyMsg($arrayHeader,$arrayPostData);
+        
     }
     else if($message == "สูตร กฎรวมแก็ส"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
@@ -93,7 +93,7 @@ function replyMsg($arrayHeader,$arrayPostData){
         curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         $result = curl_exec($ch);
-        
-    }curl_close ($ch);
+        curl_close ($ch);
+    }
    exit;
 ?>
