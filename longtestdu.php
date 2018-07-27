@@ -24,6 +24,8 @@
         $arrayPostData['messages'][3]['text'] = "ขำ";
         $arrayPostData['messages'][4]['type'] = "text";
         $arrayPostData['messages'][4]['text'] = "5555(แห้งๆ)";
+        $arrayPostData['messages'][5]['type'] = "text";
+        $arrayPostData['messages'][5]['text'] = "ข้อความที่5";
         replyMsg($arrayHeader,$arrayPostData);
     }
     else if($message == "สูตร กฎรวมแก็ส"){
