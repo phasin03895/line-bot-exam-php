@@ -17,6 +17,13 @@
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
         $arrayPostData['messages'][1]['type'] = "text";
         $arrayPostData['messages'][1]['text'] = "แต่เย็นแล้วจะไม่จ้านะ";
+        $arrayPostData['messages'][2]['type'] = "sticker";
+        $arrayPostData['messages'][2]['packageId'] = "1";
+        $arrayPostData['messages'][2]['stickerId'] = "100";
+        $arrayPostData['messages'][3]['type'] = "text";
+        $arrayPostData['messages'][3]['text'] = "ขำ";
+        $arrayPostData['messages'][4]['type'] = "text";
+        $arrayPostData['messages'][4]['text'] = "5555(แห้งๆ)";
         replyMsg($arrayHeader,$arrayPostData);
     }
     else if($message == "สูตร กฎรวมแก็ส"){
