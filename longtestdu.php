@@ -87,8 +87,15 @@
       $arrayPostData['messages'][0]['text'] = "สมบัติการเท่ากันในระบบจำนวนจริง มีดังนี้\n1.สมบัติการสะท้อน \n\ta = a \n2.สมบัติสมมาตร \n\tถ้า a=b แล้ว b = a \n3.สมบัติการถ่ายทอด\n\tถ้า a = b และ b = c แล้ว a = c
 4.สมบัติการบวกด้วยจำนวนที่เท่ากัน\n\tถ้า a = b แล้ว a + c = b + c \n5.สมบัติการคูณด้วยจำนวนที่เท่ากัน\n\tถ้า a = b และ c ≠ 0 แล้ว ac = bc";
       replyMsg($arrayHeader,$arrayPostData);
+    } 
+       else if($message == "การเท่ากันของจำนวนจริง" || $message == "การเท่ากันของระบบจำนวนจริง"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "1. การแยกตัวประกอบ \n2. หาจากสูตร x = (−b±√(b^2−4ac))/2a
+3. ทฤษฏีบทเศษเหลือ \n\t3.1. ทฤษฏีบทเศษเหลือ กล่าวว่า “ถ้าหารพหุนาม P(x) ด้วย x − a เมื่อ a เป็นจำนวนจริงแล้วเศษจากการหารจะเทำ่กับ P(a)” \n\t3.2. ทฤษฏีตัวประกอบ (factor theorem) กำหนดพหุนาม P(x) และ a เป็นจำนวนจริงใดๆ แล้ว \n\t\t3.2.1 ถ้า x − a เป็นตัวประกอบของ P(x) แลว้ P(a) = 0 \n\t\t3.2.2 ถ้า P(a) = 0 แล้ว x - a จะเป็นตัวประกอบของ P(x) \n\t\t3.2.3 พอได ้a จากข้อ 3.2.2 ก็นำไปหารสังเคราะห์";
+      replyMsg($arrayHeader,$arrayPostData);
     }
-function replyMsg($arrayHeader,$arrayPostData){
+        function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL,$strUrl);
