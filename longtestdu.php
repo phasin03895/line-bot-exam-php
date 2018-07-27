@@ -27,7 +27,7 @@
         replyMsg($arrayHeader,$arrayPostData);
         
     }
-else if($message == "ระบบจำนวนจริง์"){
+else if($message == "ระบบจำนวนจริง"){
       $image_url = "https://still-oasis-33130.herokuapp.com/012.PNG";
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
