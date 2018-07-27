@@ -87,14 +87,18 @@
 3. ทฤษฏีบทเศษเหลือ \n\t3.1. ทฤษฏีบทเศษเหลือ กล่าวว่า “ถ้าหารพหุนาม P(x) ด้วย x − a เมื่อ a เป็นจำนวนจริงแล้วเศษจากการหารจะเทำ่กับ P(a)” \n\t3.2. ทฤษฏีตัวประกอบ (factor theorem) กำหนดพหุนาม P(x) และ a เป็นจำนวนจริงใดๆ แล้ว \n\t\t3.2.1 ถ้า x − a เป็นตัวประกอบของ P(x) แลว้ P(a) = 0 \n\t\t3.2.2 ถ้า P(a) = 0 แล้ว x - a จะเป็นตัวประกอบของ P(x) \n\t\t3.2.3 พอได ้a จากข้อ 3.2.2 ก็นำไปหารสังเคราะห์";
       replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($message == "ค่าสมบูรณ์"){
+    else if($message == "ค่าสัมบูรณ์"){
+      $image_url ="https://still-oasis-33130.herokuapp.com/014.PNG"
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "ค่าสัมบูรณ์ หรือ |a| คือ ระยะห่างบนเส้นจำนวนจาก 0 ไปถึง a ";
       $arrayPostData['messages'][1]['type'] = "text";
-      $arrayPostData['messages'][1]['text'] = "เงื่อนไขของค่าสัมบูรณ์";
+      $arrayPostData['messages'][1]['text'] = "เงื่อนไขของค่าสัมบูรณ์\n_____| x ; x > 0\n|x| =| 0 ; x = 0\n_____| -x ; x < 0";
       $arrayPostData['messages'][2]['type'] = "text";
-      $arrayPostData['messages'][2]['text'] = "_____| x ; x > 0\n|x| =| 0 ; x = 0\n_____| -x ; x < 0";
+      $arrayPostData['messages'][2]['text'] = "สมบัติของค่าสัมบูรณ์";
+      $arrayPostData['messages'][3]['type'] = "image";
+      $arrayPostData['messages'][3]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][3]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
     }
 
