@@ -94,7 +94,7 @@
       $arrayPostData['messages'][1]['type'] = "text";
       $arrayPostData['messages'][1]['text'] = "เงื่อนไขของค่าสัมบูรณ์";
       $arrayPostData['messages'][2]['type'] = "text";
-      $arrayPostData['messages'][2]['text'] = "     | x ; x > 0\n|x| =| 0 ; x = 0\n     | -x ; x < 0";
+      $arrayPostData['messages'][2]['text'] = "\t| x ; x > 0\n|x| =| 0 ; x = 0\n\t| -x ; x < 0";
       replyMsg($arrayHeader,$arrayPostData);
     }
 
