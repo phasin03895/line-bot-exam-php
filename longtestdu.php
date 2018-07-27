@@ -27,11 +27,21 @@
         replyMsg($arrayHeader,$arrayPostData);
         
     }
-else if($message == "ระบบจำนวนจริง"){
+    else if($message == "ระบบจำนวนจริง"){
       $image_url = "https://still-oasis-33130.herokuapp.com/012.PNG";
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = "ะะบบจำนวนจริง";
+      $arrayPostData['messages'][0]['text'] = "ระบบจำนวนจริง";
+      $arrayPostData['messages'][1]['type'] = "image";
+      $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+    }
+    else if($message == "สมบัติของจำนวนจริง"){
+      $image_url = "https://still-oasis-33130.herokuapp.com/013.PNG";
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "กำหนด a,b,c เป็นจำนวนจริงใดๆ (a,b,c ∈ R)";
       $arrayPostData['messages'][1]['type'] = "image";
       $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
       $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
