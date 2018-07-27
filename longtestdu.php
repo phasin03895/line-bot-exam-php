@@ -88,7 +88,7 @@
       replyMsg($arrayHeader,$arrayPostData);
     }
     else if($message == "ค่าสัมบูรณ์"){
-      $image_url ="https://still-oasis-33130.herokuapp.com/014.PNG"
+      $image_url ="https://still-oasis-33130.herokuapp.com/014.PNG";
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "ค่าสัมบูรณ์ หรือ |a| คือ ระยะห่างบนเส้นจำนวนจาก 0 ไปถึง a ";
