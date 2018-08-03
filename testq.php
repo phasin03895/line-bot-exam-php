@@ -21,7 +21,7 @@
 
       $stringl=strlen($message);
       $count=0;
-      $mess[];
+      
       while($count<$stringl-2){
         $mess[$count]=$message[$count+2];
         $count++;
