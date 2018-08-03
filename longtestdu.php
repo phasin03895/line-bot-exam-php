@@ -25,12 +25,12 @@
         $arrayPostData['messages'][4]['type'] = "text";
         $arrayPostData['messages'][4]['text'] = "5555(แห้งๆ)";
         replyMsg($arrayHeader,$arrayPostData);
-        
+
     }
     else if($message[0] == "q"||$message[0] == "Q"){
       $stringl=strlen($message);
       $count=0;
-      
+
       while($count<$stringl-2){
         $mess.=$message[$count+2];
         $count++;
@@ -55,12 +55,6 @@
       $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
     }
-        else if($mess == "ฟังก์ชั่นเชิงเส้น"){
-      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-      $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = " y = f(x) = ax + b";
-      replyMsg($arrayHeader,$arrayPostData);
-        }
     else if($mess == "กฎรวมแก็ส"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
@@ -93,7 +87,7 @@
       $arrayPostData['messages'][0]['text'] = "สมบัติการเท่ากันในระบบจำนวนจริง มีดังนี้\n1.สมบัติการสะท้อน \n\ta = a \n2.สมบัติสมมาตร \n\tถ้า a=b แล้ว b = a \n3.สมบัติการถ่ายทอด\n\tถ้า a = b และ b = c แล้ว a = c
 4.สมบัติการบวกด้วยจำนวนที่เท่ากัน\n\tถ้า a = b แล้ว a + c = b + c \n5.สมบัติการคูณด้วยจำนวนที่เท่ากัน\n\tถ้า a = b และ c ≠ 0 แล้ว ac = bc";
       replyMsg($arrayHeader,$arrayPostData);
-    } 
+    }
        else if($message == "การแก้สมการพหุนาม" || $message == "การแก้สมการพหุนามตัวแปรเดียว" || $message == "การแก้สมการ"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
@@ -101,7 +95,7 @@
 3. ทฤษฏีบทเศษเหลือ \n\t3.1. ทฤษฏีบทเศษเหลือ กล่าวว่า “ถ้าหารพหุนาม P(x) ด้วย x − a เมื่อ a เป็นจำนวนจริงแล้วเศษจากการหารจะเทำ่กับ P(a)” \n\t3.2. ทฤษฏีตัวประกอบ (factor theorem) กำหนดพหุนาม P(x) และ a เป็นจำนวนจริงใดๆ แล้ว \n\t\t3.2.1 ถ้า x − a เป็นตัวประกอบของ P(x) แลว้ P(a) = 0 \n\t\t3.2.2 ถ้า P(a) = 0 แล้ว x - a จะเป็นตัวประกอบของ P(x) \n\t\t3.2.3 พอได ้a จากข้อ 3.2.2 ก็นำไปหารสังเคราะห์";
       replyMsg($arrayHeader,$arrayPostData);
     }
-  }
+
     else if($message == "ค่าสัมบูรณ์"){
       $image_url ="https://still-oasis-33130.herokuapp.com/014.PNG";
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
@@ -116,7 +110,44 @@
       $arrayPostData['messages'][3]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
     }
+    else if($mess == "อัตราส่วนตรีโกณมิติ"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "sin A =ข้าม/ฉาก \n cos A = ชิด/ฉาก  \n tan A = ข้าม/ชิด       \n cosec A = 1/sin A  \n sec A = 1/cos A  \n cot A = 1/tan A";
+      replyMsg($arrayHeader,$arrayPostData);
+    }
 
+
+  else if($mess == "มุมติดลบตรีโกณมิติ"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "sin (-θ) = -sin θ \n cos (-θ) = cos θ  \ntan (-θ) = -tan θ";
+      replyMsg($arrayHeader,$arrayPostData);
+    }
+
+  else if($mess == "ฟังก์ชั่นเอกซ์โพเนนเชียล"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "รูปฟังก์ชั่น f = {(x,y) ∈ R×R+ | y = ax, a > 0, a ≠ 1}";
+      replyMsg($arrayHeader,$arrayPostData);
+    }
+    else if($mess == "ฟังก์ชั่นเชิงเส้น"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = " y = f(x) = ax + b \nเมื่อ a,b ∈ R และ a ≠ 0 ";
+      replyMsg($arrayHeader,$arrayPostData);
+    }
+
+    else if($mess == "ฟังก์ชั่นกำลังสอง"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "กราฟของฟังก์ชั่นกำลังสอง \ny = axู^2 + bx + c เมื่อ a ≠ 0 \nและ y = a(x-h)^2 + k เป็นกราฟ พาราโบลา";
+      replyMsg($arrayHeader,$arrayPostData);
+    }
+
+
+
+}
         function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
         $ch = curl_init();
