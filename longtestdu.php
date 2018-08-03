@@ -27,7 +27,15 @@
         replyMsg($arrayHeader,$arrayPostData);
         
     }
-    else if($message == "ระบบจำนวนจริง"){
+    else if($message[0] == "q"||$message[0] == "Q"){
+      $stringl=strlen($message);
+      $count=0;
+      
+      while($count<$stringl-2){
+        $mess.=$message[$count+2];
+        $count++;
+      }
+    if($mess == "ระบบจำนวนจริง"){
       $image_url = "https://still-oasis-33130.herokuapp.com/012.PNG";
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
@@ -37,7 +45,7 @@
       $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($message == "สมบัติของจำนวนจริง"){
+    else if($mess == "สมบัติของจำนวนจริง"){
       $image_url = "https://still-oasis-33130.herokuapp.com/013.PNG";
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
@@ -47,19 +55,19 @@
       $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($message == "สูตร กฎรวมแก็ส"){
+    else if($mess == "กฎรวมแก็ส"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "P1V1/T1 = P2V2/T2";
       replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($message == "สูตร การขยายตัวของของแข็ง"){
+    else if($message == "การขยายตัวของของแข็ง"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "ΔL = L0αΔT\n ΔA = P0ɣΔT\n ΔV = V0βΔT";
       replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($message == "สูตร อุณหพลศาสตร์"){
+    else if($message == "อุณหพลศาสตร์"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "Q = McΔt\n Q = mL ";
@@ -87,6 +95,7 @@
 3. ทฤษฏีบทเศษเหลือ \n\t3.1. ทฤษฏีบทเศษเหลือ กล่าวว่า “ถ้าหารพหุนาม P(x) ด้วย x − a เมื่อ a เป็นจำนวนจริงแล้วเศษจากการหารจะเทำ่กับ P(a)” \n\t3.2. ทฤษฏีตัวประกอบ (factor theorem) กำหนดพหุนาม P(x) และ a เป็นจำนวนจริงใดๆ แล้ว \n\t\t3.2.1 ถ้า x − a เป็นตัวประกอบของ P(x) แลว้ P(a) = 0 \n\t\t3.2.2 ถ้า P(a) = 0 แล้ว x - a จะเป็นตัวประกอบของ P(x) \n\t\t3.2.3 พอได ้a จากข้อ 3.2.2 ก็นำไปหารสังเคราะห์";
       replyMsg($arrayHeader,$arrayPostData);
     }
+  }
     else if($message == "ค่าสัมบูรณ์"){
       $image_url ="https://still-oasis-33130.herokuapp.com/014.PNG";
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
