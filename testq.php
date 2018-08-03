@@ -22,7 +22,7 @@
       $stringl=strlen($message);
       $count=0;
       $mess = array();
-      while($count<$stringl-2){
+      while($count<$stringl-3){
         $mess[$count]=$message[$count+2];
         $count++;
       }
