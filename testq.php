@@ -17,7 +17,7 @@
         $arrayPostData['messages'][0]['text'] = "สวัสดีจ้าาา";
         replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($message[0] == "q"||"Q"){
+    else if($message[0] == "q"||$message[0] == "Q"){
 
       $stringl=strlen($message);
       $count=0;
