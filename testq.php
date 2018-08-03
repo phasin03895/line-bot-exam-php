@@ -26,6 +26,11 @@
         $mess[$count]=$message[$count+2];
         $count++;
       }
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = $mess;
+      replyMsg($arrayHeader,$arrayPostData);
+        /*
       if($mess == "ของไหล"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
@@ -43,7 +48,7 @@
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "Q = McΔt\n Q = mL ";
       replyMsg($arrayHeader,$arrayPostData);
-    }
+    }*/
 
     }
 
