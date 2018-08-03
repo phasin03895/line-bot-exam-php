@@ -26,9 +26,10 @@
         $mess[$count]=$message[$count+2];
         $count++;
       }
+        $me = $mess;
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = $mess;
+      $arrayPostData['messages'][0]['text'] = "$me";
         $arrayPostData['messages'][1]['type'] = "text";
       $arrayPostData['messages'][1]['text'] = "$stringl";
         $arrayPostData['messages'][2]['type'] = "text";
