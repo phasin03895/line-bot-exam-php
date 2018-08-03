@@ -23,7 +23,7 @@
       $count=0;
       
       while($count<$stringl-2){
-        $mess[$count]=$message[$count+2];
+        $mess.=$message[$count+2];
         $count++;
       }
      
