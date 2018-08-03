@@ -55,7 +55,7 @@
       $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
     }
-        else if($message == "ฟังก์ชั่นเชิงเส้น"){
+        else if($mess == "ฟังก์ชั่นเชิงเส้น"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = " y = f(x) = ax + b";
