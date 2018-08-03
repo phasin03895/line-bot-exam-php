@@ -24,6 +24,7 @@
       $mess = array();
       while($count<$stringl-2){
         $mess[$count]=$message[$count+2];
+        $count++;
       }
       if($mess == "ของไหล"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
