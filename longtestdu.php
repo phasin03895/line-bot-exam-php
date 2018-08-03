@@ -113,7 +113,7 @@
     else if($mess == "อัตราส่วนตรีโกณมิติ"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = "sin A =ข้าม/ฉาก \n cos A = ชิด/ฉาก  \n tan A = ข้าม/ชิด       \n cosec A = 1/sin A  \n sec A = 1/cos A  \n cot A = 1/tan A";
+      $arrayPostData['messages'][0]['text'] = " sin A = ข้าม/ฉาก \n cos A = ชิด/ฉาก  \n tan A = ข้าม/ชิด       \n cosec A = 1/sin A  \n sec A = 1/cos A  \n cot A = 1/tan A";
       replyMsg($arrayHeader,$arrayPostData);
     }
 
@@ -121,7 +121,7 @@
   else if($mess == "มุมติดลบตรีโกณมิติ"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = "sin (-θ) = -sin θ \n cos (-θ) = cos θ  \ntan (-θ) = -tan θ";
+      $arrayPostData['messages'][0]['text'] = "sin (-θ) = -sin θ \ncos (-θ) = cos θ  \ntan (-θ) = -tan θ";
       replyMsg($arrayHeader,$arrayPostData);
     }
 
@@ -143,7 +143,13 @@
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "กราฟของฟังก์ชั่นกำลังสอง \ny = ax^2 + bx + c เมื่อ a ≠ 0 \nและ y = a(x-h)^2 + k เป็นกราฟ พาราโบลา";
       replyMsg($arrayHeader,$arrayPostData);
-}
+    }
+    else {
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "ขอโทษค่ะ ไม่เจอคำที่ให้ค้นหา\nลองค้นหาใหม่อีกครั้งนะค่ะ";
+      replyMsg($arrayHeader,$arrayPostData);
+    }
 
 
 
