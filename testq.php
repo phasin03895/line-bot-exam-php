@@ -28,11 +28,11 @@
       }
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = $mess;
+      $arrayPostData['messages'][0]['text'] = "$mess";
         $arrayPostData['messages'][1]['type'] = "text";
-      $arrayPostData['messages'][1]['text'] = $stringl;
+      $arrayPostData['messages'][1]['text'] = "$stringl";
         $arrayPostData['messages'][2]['type'] = "text";
-      $arrayPostData['messages'][2]['text'] = $count;
+      $arrayPostData['messages'][2]['text'] ="$count";
       replyMsg($arrayHeader,$arrayPostData);
         /*
       if($mess == "ของไหล"){
