@@ -1,13 +1,10 @@
 <?php
     $accessToken = "fVTYgKqjwvwQtFKWhA2t+M5HYNe2Qw5n4zN5tuM9Vtf+bNI2r69cL1clRAwok4p5eZdTZBfLFMsPBEzzu/1e/lQItqc9cvb305G47YMuyzdg+MxWUii2Gj16JOlUiJRiImZcHPXLJwvuPGHHu/Uq8QdB04t89/1O/w1cDnyilFU=";//copy Channel access token ตอนที่ตั้งค่ามาใส่
-
     $content = file_get_contents('php://input');
     $arrayJson = json_decode($content, true);
-
     $arrayHeader = array();
     $arrayHeader[] = "Content-Type: application/json";
     $arrayHeader[] = "Authorization: Bearer {$accessToken}";
-
     //รับข้อความจากผู้ใช้
     $message = $arrayJson['events'][0]['message']['text'];
 #ตัวอย่าง Message Type "Text"
@@ -25,12 +22,10 @@
         $arrayPostData['messages'][4]['type'] = "text";
         $arrayPostData['messages'][4]['text'] = "5555(แห้งๆ)";
         replyMsg($arrayHeader,$arrayPostData);
-
     }
     else if($message[0] == "q"||$message[0] == "Q"){
       $stringl=strlen($message);
       $count=0;
-
       while($count<$stringl-2){
         $mess.=$message[$count+2];
         $count++;
@@ -95,7 +90,6 @@
 3. ทฤษฏีบทเศษเหลือ \n\t3.1. ทฤษฏีบทเศษเหลือ กล่าวว่า “ถ้าหารพหุนาม P(x) ด้วย x − a เมื่อ a เป็นจำนวนจริงแล้วเศษจากการหารจะเทำ่กับ P(a)” \n\t3.2. ทฤษฏีตัวประกอบ (factor theorem) กำหนดพหุนาม P(x) และ a เป็นจำนวนจริงใดๆ แล้ว \n\t\t3.2.1 ถ้า x − a เป็นตัวประกอบของ P(x) แลว้ P(a) = 0 \n\t\t3.2.2 ถ้า P(a) = 0 แล้ว x - a จะเป็นตัวประกอบของ P(x) \n\t\t3.2.3 พอได ้a จากข้อ 3.2.2 ก็นำไปหารสังเคราะห์";
       replyMsg($arrayHeader,$arrayPostData);
     }
-
     else if($message == "ค่าสัมบูรณ์"){
       $image_url ="https://still-oasis-33130.herokuapp.com/014.PNG";
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
@@ -116,15 +110,12 @@
       $arrayPostData['messages'][0]['text'] = " sin A = ข้าม/ฉาก \n cos A = ชิด/ฉาก  \n tan A = ข้าม/ชิด       \n cosec A = 1/sin A  \n sec A = 1/cos A  \n cot A = 1/tan A";
       replyMsg($arrayHeader,$arrayPostData);
     }
-
-
   else if($mess == "มุมติดลบตรีโกณมิติ"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "sin (-θ) = -sin θ \ncos (-θ) = cos θ  \ntan (-θ) = -tan θ";
       replyMsg($arrayHeader,$arrayPostData);
     }
-
   else if($mess == "ฟังก์ชั่นเอกซ์โพเนนเชียล"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
@@ -137,7 +128,6 @@
       $arrayPostData['messages'][0]['text'] = " y = f(x) = ax + b \nเมื่อ a,b ∈ R และ a ≠ 0 ";
       replyMsg($arrayHeader,$arrayPostData);
     }
-
     else if($mess == "ฟังก์ชั่นกำลังสอง"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
@@ -171,7 +161,7 @@
       replyMsg($arrayHeader,$arrayPostData);
 }
     else if($mess == "การเขียนเซตด้วยวงเล็บปีกกา"){
-      $image_url="https://still-oasis-33130.herokuapp.com/015.PNG"
+      $image_url="https://still-oasis-33130.herokuapp.com/015.PNG";
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "กำหนดตัวแปรแทนสมาชิกทั้งหมด
@@ -185,17 +175,12 @@
       $arrayPostData['messages'][2]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
-
     else {
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "ขอโทษค่ะ ไม่เจอคำที่ให้ค้นหา\nลองค้นหาใหม่อีกครั้งนะค่ะ";
       replyMsg($arrayHeader,$arrayPostData);
     }
-
-
-
-
 }
         function replyMsg($arrayHeader,$arrayPostData){
         $strUrl = "https://api.line.me/v2/bot/message/reply";
