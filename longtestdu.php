@@ -175,7 +175,7 @@
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "กำหนดตัวแปรแทนสมาชิกทั้งหมด
-ตามด้วยเครื่องหมาย | (| อ่านว่า "โดยที่")่ 
+ตามด้วยเครื่องหมาย | (| อ่านว่า \"โดยที่\")่ 
 แล้วตามด้วยเงื่อนไขของตัวแปรนั้น 
 ดังรูปแบบ {x | เงื่อนไขของ x}";
       $arrayPostData['messages'][1]['type'] = "text";
