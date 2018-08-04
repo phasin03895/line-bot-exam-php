@@ -144,6 +144,48 @@
       $arrayPostData['messages'][0]['text'] = "กราฟของฟังก์ชั่นกำลังสอง \ny = ax^2 + bx + c เมื่อ a ≠ 0 \nและ y = a(x-h)^2 + k เป็นกราฟ พาราโบลา";
       replyMsg($arrayHeader,$arrayPostData);
     }
+     else if($mess == "เซต"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "ชนิดของเซต
+การเขียนเซต
+ชนิดของเซต
+เขียนเซตด้วยวงเล็บปีกกา
+การกระทำของเซต
+สับเซต
+พาวเวอรเซต หรือเซตกำลัง
+คุณสมบัติการดำเนินงานของเซต
+สูตรลัดของเซต
+สูตรจำนวนสมาชิกของเซต
+แผนภาพเวนออยเลอร์";
+      replyMsg($arrayHeader,$arrayPostData);
+}
+    else if($mess == "ชนิดของเซต"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "1. เซตจำกัด เช่น {1, 2, 3, ..., 100} 
+2. เซตอนันต์ เชน [0, 1] หรือ {1, 2, 3, ...}
+3. เซตวําง (∅, {}) เป็นเซตที่ไม่มีสมาชิกอยู่เลย 
+4. เอกภพสมพัทธ์ (μ) คือ เซตที่ประกอบด้วยสมาชิกทั้งหมด 
+ของสิ่งที่เรําต้องการ";
+      replyMsg($arrayHeader,$arrayPostData);
+}
+    else if($mess == "การเขียนเซตด้วยวงเล็บปีกกา"){
+      $image_url="https://still-oasis-33130.herokuapp.com/015.PNG"
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "กำหนดตัวแปรแทนสมาชิกทั้งหมด
+ตามด้วยเครื่องหมาย | (| อ่านว่า "โดยที่")่ 
+แล้วตามด้วยเงื่อนไขของตัวแปรนั้น 
+ดังรูปแบบ {x | เงื่อนไขของ x}";
+      $arrayPostData['messages'][1]['type'] = "text";
+      $arrayPostData['messages'][1]['text'] = "ตัวอย่างเช่น";
+      $arrayPostData['messages'][2]['type'] = "image";
+      $arrayPostData['messages'][2]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][2]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
+
     else {
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
