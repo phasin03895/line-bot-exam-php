@@ -175,6 +175,33 @@
       $arrayPostData['messages'][2]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
+    else if($mess = "การกระทำของเซต"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "การกระทำของเซต
+1. การยูเนียน (∪) คือการรวมกันของสมาชิก เช่น A ∪ B จะไดวํา
+2. การอินเตอร์เซคชัน (∩) คือ การซํ้ากันของสมาชิก เช่น A ∩ B จะไดวํา
+3. ผลตํางเซต (-) คือเอาแค่เซตใดเซตหนึ่ง ไม่เอาเซตที่ซํ้ากัน เช่น A - B จะไดวํา
+4. การคอมพลีเมนท์ (A’, Ac) คือ ไม่ต้องการเซตนั้นๆ เชน A’ คือไม่เอาเซต A
+";
+        $image_url="https://still-oasis-33130.herokuapp.com/s1.PNG";
+       $arrayPostData['messages'][1]['type'] = "image";
+      $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
+         $image_url="https://still-oasis-33130.herokuapp.com/s2.PNG";
+       $arrayPostData['messages'][2]['type'] = "image";
+      $arrayPostData['messages'][2]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][2]['previewImageUrl'] = $image_url;
+         $image_url="https://still-oasis-33130.herokuapp.com/s3.PNG";
+       $arrayPostData['messages'][3]['type'] = "image";
+      $arrayPostData['messages'][3]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][3]['previewImageUrl'] = $image_url;
+         $image_url="https://still-oasis-33130.herokuapp.com/s5.PNG";
+       $arrayPostData['messages'][4]['type'] = "image";
+      $arrayPostData['messages'][4]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][4]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+    }
     else {
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
