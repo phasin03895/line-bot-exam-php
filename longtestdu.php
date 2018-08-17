@@ -202,6 +202,25 @@
       $arrayPostData['messages'][4]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
     }
+       else if($mess == "ผลคูณคาร์ทีเซียน"){#หน้าที่8-12
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "ให้ A และ B แทนเซตใดๆ เขียนผลคูณคารฺ์ทีเซียนของ A ว่า A x B  อ่านว่า         
+“A Cross B” จะได้ว่า /nผลคูณคาร์ทีเซียน ของ A และ B (AxB) คือ เซตของคู่อันดับที่มีสมาชิกตัวหน้ามาจาก A และสมาชิกตัวหลังมาจาก B 
+A×B = {(x,y) | x ∈ A, y ∈ B} /nสมบัติที่ควรทราบ /n   1.ถ้า A มีสมาชิก m ตัว และ B มีสมาชิก n ตัว แล้ว AxB มีสมาชิก mn ตัว
+(AxB) = n(A)xn(B) /n  2.  AxB ≠ BxA แต่จะเท่ากันก็ต่อเมื่อ A=B, A = ∅, B = ∅
+3.  Ax∅ = ∅ = ∅xA /n  4.  Ax(B∪C) = (AxB)∪(AxC),(A∪B)xC = (AxC)∪(BxC)
+5.  Ax(B∩C) = (AxB)∩(AxC),(A∩B)xC = (AxC)∩(BxC)
+6.  Ax(B-C) = (AxB)-(AxC),(A-B)xC = (AxC)-(BxC)
+7.  r แทน ความสัมพันธ์ที่สอดคล้องกับเงื่อนไขที่ต้องการจากผลคูณคาร์ทีเซียน
+ข้อควรระวัง!!!!!
+1.A∪(BxC) ≠ (A∪B)x(A∪C)
+2.A∩(BxC) ≠ (A∩B)x(A∩C)
+3.A-(BxC) ≠ (A-B)x(A-C)
+";
+      replyMsg($arrayHeader,$arrayPostData);
+}
+
     else {
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
