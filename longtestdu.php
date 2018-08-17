@@ -153,10 +153,10 @@
     else if($mess == "ชนิดของเซต"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = "1. เซตจำกัด เช่น {1, 2, 3, ..., 100} 
+      $arrayPostData['messages'][0]['text'] = "1. เซตจำกัด เช่น {1, 2, 3, ..., 100}
 2. เซตอนันต์ เชน [0, 1] หรือ {1, 2, 3, ...}
-3. เซตวําง (∅, {}) เป็นเซตที่ไม่มีสมาชิกอยู่เลย 
-4. เอกภพสมพัทธ์ (μ) คือ เซตที่ประกอบด้วยสมาชิกทั้งหมด 
+3. เซตวําง (∅, {}) เป็นเซตที่ไม่มีสมาชิกอยู่เลย
+4. เอกภพสมพัทธ์ (μ) คือ เซตที่ประกอบด้วยสมาชิกทั้งหมด
 ของสิ่งที่เรําต้องการ";
       replyMsg($arrayHeader,$arrayPostData);
 }
@@ -165,8 +165,8 @@
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "กำหนดตัวแปรแทนสมาชิกทั้งหมด
-ตามด้วยเครื่องหมาย | (| อ่านว่า \"โดยที่\")่ 
-แล้วตามด้วยเงื่อนไขของตัวแปรนั้น 
+ตามด้วยเครื่องหมาย | (| อ่านว่า \"โดยที่\")่
+แล้วตามด้วยเงื่อนไขของตัวแปรนั้น
 ดังรูปแบบ {x | เงื่อนไขของ x}";
       $arrayPostData['messages'][1]['type'] = "text";
       $arrayPostData['messages'][1]['text'] = "ตัวอย่างเช่น";
@@ -175,7 +175,7 @@
       $arrayPostData['messages'][2]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
-    else if($mess = "การกระทำของเซต"){
+    else if($mess == "การกระทำของเซต"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "การกระทำของเซต
@@ -202,11 +202,12 @@
       $arrayPostData['messages'][4]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
     }
-       else if($mess == "ผลคูณคาร์ทีเซียน"){#หน้าที่8-12
+    else if($mess == "ผลคูณคาร์ทีเซียน"){
+      #หน้าที่8-12
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = "ให้ A และ B แทนเซตใดๆ เขียนผลคูณคารฺ์ทีเซียนของ A ว่า A x B  อ่านว่า         
-“A Cross B” จะได้ว่า /nผลคูณคาร์ทีเซียน ของ A และ B (AxB) คือ เซตของคู่อันดับที่มีสมาชิกตัวหน้ามาจาก A และสมาชิกตัวหลังมาจาก B 
+      $arrayPostData['messages'][0]['text'] = "ให้ A และ B แทนเซตใดๆ เขียนผลคูณคารฺ์ทีเซียนของ A ว่า A x B  อ่านว่า
+“A Cross B” จะได้ว่า /nผลคูณคาร์ทีเซียน ของ A และ B (AxB) คือ เซตของคู่อันดับที่มีสมาชิกตัวหน้ามาจาก A และสมาชิกตัวหลังมาจาก B
 A×B = {(x,y) | x ∈ A, y ∈ B} /nสมบัติที่ควรทราบ /n   1.ถ้า A มีสมาชิก m ตัว และ B มีสมาชิก n ตัว แล้ว AxB มีสมาชิก mn ตัว
 (AxB) = n(A)xn(B) /n  2.  AxB ≠ BxA แต่จะเท่ากันก็ต่อเมื่อ A=B, A = ∅, B = ∅
 3.  Ax∅ = ∅ = ∅xA /n  4.  Ax(B∪C) = (AxB)∪(AxC),(A∪B)xC = (AxC)∪(BxC)
