@@ -23,6 +23,19 @@
         $arrayPostData['messages'][4]['text'] = "5555(แห้งๆ)";
         replyMsg($arrayHeader,$arrayPostData);
     }
+    else if($message="menu"||$message="เมนู"){
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "01 ระบนวนจริง
+02  เซต
+03  เลขยกกำลัง
+04  ฟังก์ชั่น
+05  อัตราส่วนตรีโกณมิติ
+06  ลำดับและอนุกรม
+07  ความน่าจะเป็น
+08  สถิติ
+";
+       replyMsg($arrayHeader,$arrayPostData); 
+    }
     else if($message[0] == "q"||$message[0] == "Q"){
       $stringl=strlen($message);
       $count=0;
@@ -30,7 +43,96 @@
         $mess.=$message[$count+2];
         $count++;
       }
-    if($mess == "ระบบจำนวนจริง"){
+      if($mess == "01"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ระบบจำนวนจริง
+	-สมบัติของจำนวนจริง
+	-การเท่ากนในระบบจำนวนจริง
+	-การแก้สมการพหุนานตัวแปรเดยว
+	-การไม่เท่ากันในระบบจำนวนจริง
+	-ค่าสัมบูรณ์ของจำนวนจริง
+	-คุณสมบัติของอสมการค่าสัมบูรณ์";
+        replyMsg($arrayHeader,$arrayPostData);
+      }
+      else if($mess == "02"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "เซต 
+-ชนิดของเซต
+-การเขียนเซต
+-การกระทำของเซต
+-สับเซต 
+-พาวเวอร์เซตหรือเซตกำลัง
+-คุณสมบัติของการ Operation
+-สูตรลดทอน
+-สูตรจำนวนสมาชิกของเซต
+-แผนภาพเวนส์ & ออยเลอร์";
+        replyMsg($arrayHeader,$arrayPostData);
+      }
+      else if($mess == "03"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "เลขยกกำลัง
+-สมบัติของเลขยกกำลัง
+-สมบัติของรากที่ n ";
+        replyMsg($arrayHeader,$arrayPostData);
+      }
+      else if($mess == "04"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ฟังก์ชั่น
+-ผลคูณคาร์ทีเชียน
+-ฟังก์ชั่น
+-สมบัติของพาราโบลา";
+        replyMsg($arrayHeader,$arrayPostData);
+      }
+      else if($mess == "05"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "อัตราส่วนตรีโกณมิติ
+-พิจารณาสามเหลี่ยม ABC
+-อัตรส่วนของความยาวด้านต่างๆ
+-การยุบมุมที่ติดลบ
+-ทฤษฏีบทพีธาโกรัส
+-อัตราส่วนตรีโกณมิติที่ควรทราบ
+";
+        replyMsg($arrayHeader,$arrayPostData);
+      }
+      else if($mess == "06"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ลำดับและอนุกรม
+  -ลำดับเลขคณิต
+	-ลำเรขาคณิต
+	-สมบัติของซิกมา
+	-สูตรผลบวกสำคัญ
+	-ผลบวกของ n พจน์แรกของอนุกรม
+	-อนุกรมเลขคณติ
+	-อนุกรมเรขาคณิต";
+        replyMsg($arrayHeader,$arrayPostData);
+      }
+      else if($mess == "07"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "ความน่าจะเป็น
+	-กฏการนับเบื้องต้น
+	-แฟคทอเรียล
+	-การสับเปลี่ยน
+	-สมบัติของการจัดหมู่
+	-ความน่าจะเป็น";
+        replyMsg($arrayHeader,$arrayPostData);
+      }
+      else if($mess == "08"){
+        $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+        $arrayPostData['messages'][0]['type'] = "text";
+        $arrayPostData['messages'][0]['text'] = "สถิติ
+	-การหาค่ากลางข้อมูล
+	-การวัดตำแหน่งของข้อมูล
+	-การวัดหการกระจายของข้อมูล";
+        replyMsg($arrayHeader,$arrayPostData);
+      }
+    else if($mess == "ระบบจำนวนจริง"){
       $image_url = "https://still-oasis-33130.herokuapp.com/012.PNG";
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
