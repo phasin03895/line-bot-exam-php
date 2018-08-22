@@ -47,12 +47,12 @@
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ระบบจำนวนจริง
-	-สมบัติของจำนวนจริง
-	-การเท่ากนในระบบจำนวนจริง
-	-การแก้สมการพหุนานตัวแปรเดยว
-	-การไม่เท่ากันในระบบจำนวนจริง
-	-ค่าสัมบูรณ์ของจำนวนจริง
-	-คุณสมบัติของอสมการค่าสัมบูรณ์";
+-สมบัติของจำนวนจริง
+-การเท่ากนในระบบจำนวนจริง
+-การแก้สมการพหุนานตัวแปรเดยว
+-การไม่เท่ากันในระบบจำนวนจริง
+-ค่าสัมบูรณ์ของจำนวนจริง
+-คุณสมบัติของอสมการค่าสัมบูรณ์";
         replyMsg($arrayHeader,$arrayPostData);
       }
       else if($mess == "02"){
@@ -103,33 +103,33 @@
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ลำดับและอนุกรม
-  -ลำดับเลขคณิต
-	-ลำเรขาคณิต
-	-สมบัติของซิกมา
-	-สูตรผลบวกสำคัญ
-	-ผลบวกของ n พจน์แรกของอนุกรม
-	-อนุกรมเลขคณติ
-	-อนุกรมเรขาคณิต";
+ -ลำดับเลขคณิต
+-ลำเรขาคณิต
+-สมบัติของซิกมา
+-สูตรผลบวกสำคัญ
+-ผลบวกของ n พจน์แรกของอนุกรม
+-อนุกรมเลขคณติ
+-อนุกรมเรขาคณิต";
         replyMsg($arrayHeader,$arrayPostData);
       }
       else if($mess == "07"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ความน่าจะเป็น
-	-กฏการนับเบื้องต้น
-	-แฟคทอเรียล
-	-การสับเปลี่ยน
-	-สมบัติของการจัดหมู่
-	-ความน่าจะเป็น";
+-กฏการนับเบื้องต้น
+-แฟคทอเรียล
+-การสับเปลี่ยน
+-สมบัติของการจัดหมู่
+-ความน่าจะเป็น";
         replyMsg($arrayHeader,$arrayPostData);
       }
       else if($mess == "08"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สถิติ
-	-การหาค่ากลางข้อมูล
-	-การวัดตำแหน่งของข้อมูล
-	-การวัดหการกระจายของข้อมูล";
+-การหาค่ากลางข้อมูล
+-การวัดตำแหน่งของข้อมูล
+-การวัดหการกระจายของข้อมูล";
         replyMsg($arrayHeader,$arrayPostData);
       }
     else if($mess == "ระบบจำนวนจริง"){
