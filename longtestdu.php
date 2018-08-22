@@ -43,7 +43,7 @@
         $mess.=$message[$count+2];
         $count++;
       }
-      if($mess == "01"){
+      if($mess == "1"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ระบบจำนวนจริง
