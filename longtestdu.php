@@ -23,7 +23,7 @@
         $arrayPostData['messages'][4]['text'] = "5555(แห้งๆ)";
         replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($message=="menu"||$message=="เมนู"){
+    else if($message=="menu"){
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "01 ระบนวนจริง
 02  เซต
