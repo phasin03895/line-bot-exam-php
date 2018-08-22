@@ -23,7 +23,7 @@
         $arrayPostData['messages'][4]['text'] = "5555(แห้งๆ)";
         replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($message="menu"||$message="เมนู"){
+    else if($message=="menu"||$message=="เมนู"){
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "01 ระบนวนจริง
 02  เซต
@@ -43,7 +43,7 @@
         $mess.=$message[$count+2];
         $count++;
       }
-      if($mess == "1"){
+      if($mess == "01"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ระบบจำนวนจริง
