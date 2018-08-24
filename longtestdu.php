@@ -216,6 +216,7 @@
 a เป็นความยาวของด้านตรงข้ามมุม A หรือ เรียกว่ํา \"ข้าม\"
 b เป็นความยาวด้านประชิดมุม A หรือเรียกว่ํา\"ชิด\"
 c เป็นความยาวด้านตรงข้ามมุมฉาก หรือเรียกว่ํา\"ฉาก\"";
+       $arrayPostData['messages'][1]['type'] = "image";
       $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
       $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;  
       $arrayPostData['messages'][2]['type'] = "text";
