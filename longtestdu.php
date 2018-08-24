@@ -255,22 +255,6 @@ cosec A = 1/sin A		\nsec A = 1/cos A		\ncot A = 1/tan A
       $arrayPostData['messages'][0]['text'] = "กราฟของฟังก์ชั่นกำลังสอง \ny = ax^2 + bx + c เมื่อ a ≠ 0 \nและ y = a(x-h)^2 + k เป็นกราฟ พาราโบลา";
       replyMsg($arrayHeader,$arrayPostData);
     }
-     else if($mess == "เซต"){
-      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-      $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = "ชนิดของเซต
-การเขียนเซต
-ชนิดของเซต
-เขียนเซตด้วยวงเล็บปีกกา
-การกระทำของเซต
-สับเซต
-พาวเวอรเซต หรือเซตกำลัง
-คุณสมบัติการดำเนินงานของเซต
-สูตรลัดของเซต
-สูตรจำนวนสมาชิกของเซต
-แผนภาพเวนออยเลอร์";
-      replyMsg($arrayHeader,$arrayPostData);
-}
     else if($mess == "ชนิดของเซต"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
@@ -394,7 +378,49 @@ else if($mess == "ฟังก์ชั่นเชิงเส้น"){
       $arrayPostData['messages'][0]['text'] = " y = f(x) = ax + b \nเมื่อ a,b ∈ R และ a ≠ 0";
       replyMsg($arrayHeader,$arrayPostData);
 }
+else if($mess == "การแปลงมุมที่ติดลบ"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = " การยุบมุมที่ติดลบ
+sin (-θ) = -sin θ
+cos (-θ) = cos θ
+tan (-θ) = -tan θ";
+      replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "ทฤษฏีบทพีธาโกรัส"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "ให ้ ABC เป็นสํามเหลี่ยมมุมฉาก และ A,B,Cเป็นความยาวด้านแต่ละด้านดังรูป
+			(c^2) = (a^2) + (b^2)
+\"ด้านตรงข้ามมุมฉาก = ผลบวกกำลังสองของด้านประกอบมุมฉาก\"";
+      $image_url="https://still-oasis-33130.herokuapp.com/pi.png";
+       $arrayPostData['messages'][1]['type'] = "image";
+      $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
+      else if($mess == "ลำดับและอนุกรม"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "ลำดับเลขคณิต
+ผลต่างร่วม d = a(n+1) − a((n))
+พจน์ที่ n ของลำดับเลขคณิต คือ a((n)) = a((1)) + (n − 1)d
+ลำดับเรขาคณิต
+อัตราส่วนร่วม r =(a((n))+1)/a((n))
+พจน์ที่ n ของลำดับเรขาคณิต คือ an = a1r((n−1))";
+      replyMsg($arrayHeader,$arrayPostData);
+}
+    else if($mess == "สมบัติของพาราโบลา"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "1.จุดยอด (vertex) หรือ จุดวกกลับ (turning point) หาได้จาก V = (-(b/2a),((4ac-(b^2))/4a)
+2. สมการแกนสมมาตรของกราฟ คือ x = -(b/2a) และ ค่าสูงสุดหรือต่ำสุดของฟังก์ชั่น คือ y = ((4ac-(b^2))/4a)
+3.เมื่อ y = ax2 + bx + c จะได ้ x = K เป็นแกนสมมาตร แล้ว f(k+Δ) = f(k−Δ) กล่าวคือ 
+ค่าของฟัง์ชั่นที่อยู่ห่างจากแกนสมมาตรเท่ากันจะมีค่าเท่ากัน
+4.จุดตัดแกน x หาได้จาก ให้ y = 0 และ จุดตัดแกน y ให้ x = 0";
 
+ replyMsg($arrayHeader,$arrayPostData);
+}
 
     else {
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
