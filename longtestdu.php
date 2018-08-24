@@ -207,9 +207,27 @@
       replyMsg($arrayHeader,$arrayPostData);
     }
     else if($mess == "อัตราส่วนตรีโกณมิติ"){
+      $image_url ="https://still-oasis-33130.herokuapp.com/pi.png";
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = " sin A = ข้าม/ฉาก \n cos A = ชิด/ฉาก  \n tan A = ข้าม/ชิด       \n cosec A = 1/sin A  \n sec A = 1/cos A  \n cot A = 1/tan A";
+      $arrayPostData['messages'][0]['text'] = "พิจารณาสามเหลี่ยม ABC
+จากรูป ABC เป็นรูปสามเหลี่ยมที่มีมุม C เป็นมุมฉากและด้านตรงข้ามมุม A, B และ C ยาว a, b และ c
+ตามลำดับโดยยึดมุม B เป็นมุมหลักจะได้ 
+a เป็นความยาวของด้านตรงข้ามมุม A หรือ เรียกว่ํา “ข้าม”
+b เป็นความยาวด้านประชิดมุม A หรือเรียกว่ํา“ชิด ”
+c เป็นความยาวด้านตรงข้ามมุมฉาก หรือเรียกว่ํา“ฉาก”";
+      $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;  
+      $arrayPostData['messages'][2]['type'] = "text";
+      $arrayPostData['messages'][2]['text'] ="อัตราส่วนของความยาวด้านต่างๆ
+sin A =ข้าม/ฉาก		\ncos A = ชิด/ฉาก		\ntan A = ข้าม/ชิด
+cosec A = 1/sin A		\nsec A = 1/cos A		\ncot A = 1/tan A
+ข้อสังเกต!!!
+1. tan A = sin A/cos Aและ cot A = cos A/sin A
+2. (sin A)(cosec A) = 1, (cos A)(sec A) = 1, (tan A)(cot A) = 1
+3. sin^2 A + cos^2 A = 1
+4. 1 + cot^2 A = cosec^2 A
+5. tan^2 A + 1 = sec^2 A";
       replyMsg($arrayHeader,$arrayPostData);
     }
   else if($mess == "มุมติดลบตรีโกณมิติ"){
