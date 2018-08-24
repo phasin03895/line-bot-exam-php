@@ -23,7 +23,7 @@
         $arrayPostData['messages'][4]['text'] = "5555(แห้งๆ)";
         replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($message=="menu"){
+    else if($message=="menu" || $message == "เมนู"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "01 ระบนวนจริง
@@ -33,8 +33,7 @@
 05  อัตราส่วนตรีโกณมิติ
 06  ลำดับและอนุกรม
 07  ความน่าจะเป็น
-08  สถิติ
-";
+08  สถิติ";
        replyMsg($arrayHeader,$arrayPostData); 
     }
     else if($message[0] == "q"||$message[0] == "Q"){
@@ -360,7 +359,23 @@ r2 = {(x,y) ∈ R×R | x = y2} ไม่เป็นฟังก์ชั่น
        
     replyMsg($arrayHeader,$arrayPostData);
     }
-        
+       else if($mess == "การหาค่าของฟังก์ชั่น"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "การหาค่าของฟังก์ชั่น หาได ้จาก 3 วิธีได้แก่
+1) หาจากเซตที่แจกแจงสมาชิก
+2) อ่านจากกราฟ และ
+3) แทนค่าในสมการโดยค่าที่หาได้จากฟังก์ชั่น จะเป็นค่า y";
+      replyMsg($arrayHeader,$arrayPostData);
+}
+
+else if($mess == "ฟังก์ชั่นเชิงเส้น"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = " y = f(x) = ax + b \nเมื่อ a,b ∈ R และ a ≠ 0";
+      replyMsg($arrayHeader,$arrayPostData);
+}
+
 
     else {
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
