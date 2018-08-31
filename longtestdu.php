@@ -463,6 +463,72 @@ else if($mess == "สมบัติของความน่าจะเป�
 ";
       replyMsg($arrayHeader,$arrayPostData);
 }
+else if($mess == "ชนิดของเซต"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "1. เซตจำกัด เช่น {1, 2, 3, ..., 100} 
+2. เซตอนันต์ เชน [0, 1] หรือ {1, 2, 3, ...}
+3. เซตวําง (∅, {}) เป็นเซตที่ไม่มีสมาชิกอยู่เลย 
+4. เอกภพสมพัทธ์ (μ) คอ เซตที่ประกอบด้วยสมาชิกทั้งหมด ของสิ่งที่เรําต้องการ";
+      replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "การเขียนเซต"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "1. เขียนแบบแจกแจงสมาชิก (Tubular form) มีหลักการเขียน ดังนี้
+ในกรณีที่จำนวนสมาชิกมากๆ ให้เขียนสมาชิกอยํางน้อย 3 ตัวแรก แล้วใช้จุด 3 จุด (Triple dot) แล้วจงเขียนสมาชิกตัวสุดท้าย 
+2. เขียนแบบบอกเงื่อนไขของสมาชิก (Set builder form) หลักการเขียนมีดังนี้
+-เขียนเซตด้วยวงเล็บปีกกา
+-กำหนดตัวแปรแทนสมาชิกทั้งหมดตามด้วยเครื่องหมาย | (| อ่านว่า \"โดยที่\")่ แล้วตามด้วยเงื่อนไขของตัวแปรนั้น ดังรูปแบบ {x | เงื่อนไขของ x}
+";
+      replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "การยูเนียน"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $image_url="https://still-oasis-33130.herokuapp.com/ada5.jpg";
+       $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "การอินเตอร์เซคชัน"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $image_url="https://still-oasis-33130.herokuapp.com/ada6.jpg";
+       $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "ผลต่างเซต"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+     $image_url="https://still-oasis-33130.herokuapp.com/ada7.jpg";
+       $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "การคอมพลีเมนท์"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $image_url="https://still-oasis-33130.herokuapp.com/ada8.jpg";
+       $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "พาวเวอร์เซต"||($mess == "เซตกำลัง"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "P(A) = {สบเซตทงหมดของ A} 
+เช่น A= {1, 2, 3} ดังนั้น P(A) = {{1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}, ∅} 
+ข้อสังเกต
+1. จำนวนสมาชิกของ P(A) = n(P(A)) = 2n(A) 
+2. เมื่อ A เป็นเซตจำกัดและ n(A) = K จะได้ 2K
+     2.1 n(P(A)) = 2K 2.2 n(P(P(A))) = 22K
+     2.3 n(P(P(P(A)))) = 22K
+ดังนั้น จำนวนสมาชิกที่ต่ำที่สุดของพาวเวอร์เซตคือ P(A) = 20 = 1 = ∅";
+      replyMsg($arrayHeader,$arrayPostData);
+}
+
 
     else {
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
