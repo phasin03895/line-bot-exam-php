@@ -528,8 +528,22 @@ else if($mess == "พาวเวอร์เซต"||$mess == "เซตกำ�
 ดังนั้น จำนวนสมาชิกที่ต่ำที่สุดของพาวเวอร์เซตคือ P(A) = 20 = 1 = ∅";
       replyMsg($arrayHeader,$arrayPostData);
 }
-
-
+else if($mess == "การโอเปอเรชั่น"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $image_url="https://still-oasis-33130.herokuapp.com/คุณสมบัติของการOperation.png";
+       $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
+ else if($mess == "สูตรลดทอน"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $image_url="https://still-oasis-33130.herokuapp.com/สูตรลดทอน.png";
+       $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
     else {
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
