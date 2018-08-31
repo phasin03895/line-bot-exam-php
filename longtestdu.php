@@ -515,7 +515,7 @@ else if($mess == "การคอมพลีเมนท์"){
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "พาวเวอร์เซต"||($mess == "เซตกำลัง"){
+else if($mess == "พาวเวอร์เซต"||$mess == "เซตกำลัง"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "P(A) = {สบเซตทงหมดของ A} 
