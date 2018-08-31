@@ -454,6 +454,15 @@ else if($mess == "สูตรความน่าจะเป็น"){
       replyMsg($arrayHeader,$arrayPostData);
 }
 
+else if($mess == "สมบัติของความน่าจะเป็น"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "1. 0 ≤ P(E) ≤ 1 โดย P(E) = 0 หมายถึงไม่มีเหตุการณ์นั้นเกิดขึ้น 
+2. P(S) = 1 หมายถึง ความน่าจะเป็นของแซมเปิ้ลสเปซเท่ากับ 1 เสมอ 
+3. ถ้า P(E\') แทนความน่าจะเป็นที่เหตุการณ์ E จะไม่เกิดขึ้นแล้ว P(E) = 1 – P(E\')
+";
+      replyMsg($arrayHeader,$arrayPostData);
+}
 
     else {
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
