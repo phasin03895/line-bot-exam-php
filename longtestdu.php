@@ -429,6 +429,30 @@ else if($mess == "สมบัติของซิกมา"){
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
+else if($mess == "สูตรผลบวกของซิกมา"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $image_url="https://still-oasis-33130.herokuapp.com/ada2.jpg";
+       $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "สมบัติของการจัดหมู่"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $image_url="https://still-oasis-33130.herokuapp.com/ada3.jpg";
+       $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "สูตรความน่าจะเป็น"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+      $image_url="https://still-oasis-33130.herokuapp.com/ada4.jpg";
+       $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
 
 
     else {
