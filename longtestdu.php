@@ -424,9 +424,9 @@ else if($mess == "ทฤษฏีบทพีธาโกรัส"){
 else if($mess == "สมบัติของซิกมา"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $image_url="https://still-oasis-33130.herokuapp.com/ada1.jpg";
-       $arrayPostData['messages'][1]['type'] = "image";
-      $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
-      $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
+       $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
 
