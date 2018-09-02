@@ -544,6 +544,128 @@ else if($mess == "การโอเปอเรชั่น"){
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
+else if($mess == "สูตรจำนวนสมาชิกของเซต"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+	$image_url="https://still-oasis-33130.herokuapp.com/sett.png";
+	 $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "แผนภาพเวนส์-ออยเลอร์"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+	$image_url="https://still-oasis-33130.herokuapp.com/allvein.png";
+	 $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+	replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "สมบัติของเลขยกกำลัง"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+	$image_url="https://still-oasis-33130.herokuapp.com/power.png";
+	 $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;	
+	replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess =="ผลต่างกําลังสอง"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+	$image_url="https://still-oasis-33130.herokuapp.com/powertwo.png";
+	 $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;	
+	replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "แฟคทอเรียล"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+	$image_url="https://still-oasis-33130.herokuapp.com/ada9.jpg";
+	 $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;	
+      replyMsg($arrayHeader,$arrayPostData);
+}
+	    else if($mess == "การสับเปลี่ยนเชิงเส้น"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+	$image_url="https://still-oasis-33130.herokuapp.com/ada10.jpg";
+	 $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
+
+else if($mess == "การสับเปลี่ยนแบบวงกลม"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+	$image_url="https://still-oasis-33130.herokuapp.com/ada11.jpg";
+	 $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "การจัดหมู่"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+	$image_url="https://still-oasis-33130.herokuapp.com/ada12.jpg";
+	 $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "การเปลี่ยนลําดับ"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+	$image_url="https://still-oasis-33130.herokuapp.com/ada13.jpg";
+	 $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "สมบัติของการจัดหมู่"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+	$image_url="https://still-oasis-33130.herokuapp.com/ada14.jpg";
+	 $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "การวัดการกระจายข้อมูล"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+	$image_url="https://still-oasis-33130.herokuapp.com/ada15.jpg";
+	 $arrayPostData['messages'][0]['type'] = "image";
+      $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "การหาค่ากลางข้อมูล"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+	$arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "1.ข้อมูลไม่แจกแจงความถี่";
+	$image_url="https://still-oasis-33130.herokuapp.com/mid1.png";
+	 $arrayPostData['messages'][1]['type'] = "image";
+      $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
+	$arrayPostData['messages'][2]['type'] = "text";
+      $arrayPostData['messages'][2]['text'] = "2.ข้อมูลแจกแจงความถี่";
+	$image_url="https://still-oasis-33130.herokuapp.com/mid2.png";
+	 $arrayPostData['messages'][3]['type'] = "image";
+      $arrayPostData['messages'][3]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][3]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "การวัดตำแหน่งข้อมูล"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+	$arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "1.ข้อมูลไม่แจกแจงความถี่";
+	$image_url="https://still-oasis-33130.herokuapp.com/atitude.png";
+	 $arrayPostData['messages'][1]['type'] = "image";
+      $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
+	$arrayPostData['messages'][2]['type'] = "text";
+      $arrayPostData['messages'][2]['text'] = "2.ข้อมูลแจกแจงความถี่";
+	$image_url="https://still-oasis-33130.herokuapp.com/atitude2.png";
+	 $arrayPostData['messages'][3]['type'] = "image";
+      $arrayPostData['messages'][3]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][3]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
+
     else {
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
