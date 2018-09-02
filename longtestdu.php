@@ -530,7 +530,7 @@ else if($mess == "พาวเวอร์เซต"||$mess == "เซตกำ�
 }
 else if($mess == "การโอเปอเรชั่น"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-      $image_url="https://still-oasis-33130.herokuapp.com/คุณสมบัติของการOperation.png";
+      $image_url="https://still-oasis-33130.herokuapp.com/Operation.png";
        $arrayPostData['messages'][0]['type'] = "image";
       $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
