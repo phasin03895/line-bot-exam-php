@@ -538,7 +538,7 @@ else if($mess == "การโอเปอเรชั่น"){
 }
  else if($mess == "สูตรลดทอน"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-      $image_url="https://still-oasis-33130.herokuapp.com/สูตรลดทอน.png";
+      $image_url="https://still-oasis-33130.herokuapp.com/ton.png";
        $arrayPostData['messages'][0]['type'] = "image";
       $arrayPostData['messages'][0]['originalContentUrl'] = $image_url;
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
