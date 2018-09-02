@@ -229,18 +229,16 @@ cosec A = 1/sin A		\nsec A = 1/cos A		\ncot A = 1/tan A
 3. sin^2 A + cos^2 A = 1
 4. 1 + cot^2 A = cosec^2 A
 5. tan^2 A + 1 = sec^2 A";
+$image_url="https://still-oasis-33130.herokuapp.com/pita.png";
+       $arrayPostData['messages'][3]['type'] = "image";
+      $arrayPostData['messages'][3]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][3]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
     }
   else if($mess == "มุมติดลบตรีโกณมิติ"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "sin (-θ) = -sin θ \ncos (-θ) = cos θ  \ntan (-θ) = -tan θ";
-      replyMsg($arrayHeader,$arrayPostData);
-    }
-  else if($mess == "ฟังก์ชั่นเอกซ์โพเนนเชียล"){
-      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
-      $arrayPostData['messages'][0]['type'] = "text";
-      $arrayPostData['messages'][0]['text'] = "รูปฟังก์ชั่น f = {(x,y) ∈ R×R+ | y = ax, a > 0, a ≠ 1}";
       replyMsg($arrayHeader,$arrayPostData);
     }
     else if($mess == "ฟังก์ชั่นเชิงเส้น"){
@@ -665,7 +663,49 @@ else if($mess == "การวัดตำแหน่งข้อมูล"){
       $arrayPostData['messages'][3]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
-
+else if($mess == "ฟังก์ชั่นค่าสัมบูรณ์"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+	$arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "y = |x – h| + k \nเมื่อ a, c เป็นจำนวนจริง \nโดยมี (h, k) เป็นจุดยอด";
+	$image_url="https://still-oasis-33130.herokuapp.com/absolute.png";
+	 $arrayPostData['messages'][1]['type'] = "image";
+      $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "ฟังก์ชั่นเอกซ์โพเนนเชียล"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+	$arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = "f = {(x,y) ∈ R×R+ | y = ax, a > 0, a ≠ 1}";
+	$arrayPostData['messages'][1]['type'] = "text";
+      $arrayPostData['messages'][1]['text'] = "1. ถ้า 0 < a < 1 แล้ว f( x ) จะเป็นฟังก์ชั่นลด";
+	$arrayPostData['messages'][2]['type'] = "text";
+      $arrayPostData['messages'][2]['text'] = "2. ถ้า a > 1 แล้ว f ( x ) จะเป็นฟังก์ชั่นเพิ่ม";
+	$image_url="https://still-oasis-33130.herokuapp.com/expo.png";
+	 $arrayPostData['messages'][1]['type'] = "image";
+      $arrayPostData['messages'][3]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][3]['previewImageUrl'] = $image_url;
+	$arrayPostData['messages'][4]['type'] = "text";
+      $arrayPostData['messages'][4]['text'] = "การหาค่าของรากที่สองของ 
+x ±2√y และ √(x ± 2√y) 
+จาก (√a + √b) = x + 2√y
+((√a)^2)+ 2√a√b+ ((√b)^2) = x + 2√y
+a+ 2√a√b+ b = x +2√y
+a +b +2√ab = x +2√y
+√(x ± 2√y) = √a± √b ก็ต่อเมื่อ a + b = x และ ab = y
+";
+      replyMsg($arrayHeader,$arrayPostData);
+}
+else if($mess == "ฟังก์ชั่นกำลังสอง"){
+      $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
+	$arrayPostData['messages'][0]['type'] = "text";
+      $arrayPostData['messages'][0]['text'] = " y = ax2 + bx + c เมื่อ a ≠ 0 \nและ y = a((x-h)^2)+k เป็นกราฟพาราโบลา \nแบ่งเป็น 2 ชนิด";
+	$image_url="https://still-oasis-33130.herokuapp.com/funpowertwo.png";
+	 $arrayPostData['messages'][1]['type'] = "image";
+      $arrayPostData['messages'][1]['originalContentUrl'] = $image_url;
+      $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
+      replyMsg($arrayHeader,$arrayPostData);
+}
     else {
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
