@@ -46,12 +46,12 @@
       if($mess == "01"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "ระบบจำนวนจริง
--สมบัติของจำนวนจริง
--การเท่ากนในระบบจำนวนจริง
--การแก้สมการพหุนานตัวแปรเดยว
+        $arrayPostData['messages'][0]['text'] = "011 ระบบจำนวนจริง
+012 สมบัติของจำนวนจริง
+013 การเท่ากนในระบบจำนวนจริง
+014 การแก้สมการพหุนานตัวแปรเดยว
 -การไม่เท่ากันในระบบจำนวนจริง
--ค่าสัมบูรณ์ของจำนวนจริง
+015 ค่าสัมบูรณ์ของจำนวนจริง
 -คุณสมบัติของอสมการค่าสัมบูรณ์";
         replyMsg($arrayHeader,$arrayPostData);
       }
@@ -132,7 +132,7 @@
 -การวัดหการกระจายของข้อมูล";
         replyMsg($arrayHeader,$arrayPostData);
       }
-    else if($mess == "ระบบจำนวนจริง"){
+    else if($mess == "ระบบจำนวนจริง"||$mess == "011"){
       $image_url = "https://still-oasis-33130.herokuapp.com/012.PNG";
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
@@ -142,7 +142,7 @@
       $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($mess == "สมบัติของจำนวนจริง"){
+    else if($mess == "สมบัติของจำนวนจริง"||$mess == "012"){
       $image_url = "https://still-oasis-33130.herokuapp.com/013.PNG";
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
@@ -178,21 +178,21 @@
         $arrayPostData['messages'][0]['stickerId'] = "46";
         replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($message == "การเท่ากันของจำนวนจริง" || $message == "การเท่ากันของระบบจำนวนจริง"){
+    else if($message == "การเท่ากันของจำนวนจริง" ||$mess == "013"|| $message == "การเท่ากันของระบบจำนวนจริง"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "สมบัติการเท่ากันในระบบจำนวนจริง มีดังนี้\n1.สมบัติการสะท้อน \n\ta = a \n2.สมบัติสมมาตร \n\tถ้า a=b แล้ว b = a \n3.สมบัติการถ่ายทอด\n\tถ้า a = b และ b = c แล้ว a = c
 4.สมบัติการบวกด้วยจำนวนที่เท่ากัน\n\tถ้า a = b แล้ว a + c = b + c \n5.สมบัติการคูณด้วยจำนวนที่เท่ากัน\n\tถ้า a = b และ c ≠ 0 แล้ว ac = bc";
       replyMsg($arrayHeader,$arrayPostData);
     }
-       else if($message == "การแก้สมการพหุนาม" || $message == "การแก้สมการพหุนามตัวแปรเดียว" || $message == "การแก้สมการ"){
+       else if($message == "การแก้สมการพหุนาม" ||$mess == "014"|| $message == "การแก้สมการพหุนามตัวแปรเดียว" || $message == "การแก้สมการ"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "1. การแยกตัวประกอบ \n2. หาจากสูตร x = (−b±√(b^2−4ac))/2a
 3. ทฤษฏีบทเศษเหลือ \n\t3.1. ทฤษฏีบทเศษเหลือ กล่าวว่า “ถ้าหารพหุนาม P(x) ด้วย x − a เมื่อ a เป็นจำนวนจริงแล้วเศษจากการหารจะเทำ่กับ P(a)” \n\t3.2. ทฤษฏีตัวประกอบ (factor theorem) กำหนดพหุนาม P(x) และ a เป็นจำนวนจริงใดๆ แล้ว \n\t\t3.2.1 ถ้า x − a เป็นตัวประกอบของ P(x) แลว้ P(a) = 0 \n\t\t3.2.2 ถ้า P(a) = 0 แล้ว x - a จะเป็นตัวประกอบของ P(x) \n\t\t3.2.3 พอได ้a จากข้อ 3.2.2 ก็นำไปหารสังเคราะห์";
       replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($message == "ค่าสัมบูรณ์"){
+    else if($message == "ค่าสัมบูรณ์"||$mess == "015"){
       $image_url ="https://still-oasis-33130.herokuapp.com/014.PNG";
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
