@@ -59,15 +59,19 @@
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "เซต 
--ชนิดของเซต
--การเขียนเซต
--การกระทำของเซต
--สับเซต 
--พาวเวอร์เซตหรือเซตกำลัง
--คุณสมบัติของการ Operation
--สูตรลดทอน
--สูตรจำนวนสมาชิกของเซต
--แผนภาพเวนส์ & ออยเลอร์";
+021 ชนิดของเซต
+022 การเขียนเซต
+023 การกระทำของเซต
+024 ผลตูณคาร์ทีเซี่ยน 
+025 คุณสมบัติของการ Operation
+	0251 ยูเนียน	
+	0252 อินเตอร์เซกชั่น
+	0253 ผลต่างของเซต
+	0254 คอมพลีเมนต์ 
+	0255 พาวเวอร์เซต
+	0256 สูตรลดทอน
+026 สูตรจำนวนสมาชิกของเซต
+027 แผนภาพเวนส์ & ออยเลอร์";
         replyMsg($arrayHeader,$arrayPostData);
       }
       else if($mess == "03"){
@@ -253,7 +257,7 @@ $image_url="https://still-oasis-33130.herokuapp.com/pita.png";
       $arrayPostData['messages'][0]['text'] = "กราฟของฟังก์ชั่นกำลังสอง \ny = ax^2 + bx + c เมื่อ a ≠ 0 \nและ y = a(x-h)^2 + k เป็นกราฟ พาราโบลา";
       replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($mess == "ชนิดของเซต"){
+    else if($mess == "ชนิดของเซต"||$mess == "021"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "1. เซตจำกัด เช่น {1, 2, 3, ..., 100}
@@ -263,7 +267,7 @@ $image_url="https://still-oasis-33130.herokuapp.com/pita.png";
 ของสิ่งที่เรําต้องการ";
       replyMsg($arrayHeader,$arrayPostData);
 }
-    else if($mess == "การเขียนเซตด้วยวงเล็บปีกกา"){
+    else if($mess == "การเขียนเซตด้วยวงเล็บปีกกา"||$mess == "022"){
       $image_url="https://still-oasis-33130.herokuapp.com/015.PNG";
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
@@ -278,7 +282,7 @@ $image_url="https://still-oasis-33130.herokuapp.com/pita.png";
       $arrayPostData['messages'][2]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
-    else if($mess == "การกระทำของเซต"){
+    else if($mess == "การกระทำของเซต"||$mess == "023"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "การกระทำของเซต
@@ -305,7 +309,7 @@ $image_url="https://still-oasis-33130.herokuapp.com/pita.png";
       $arrayPostData['messages'][4]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($mess == "ผลคูณคาร์ทีเซียน"){
+    else if($mess == "ผลคูณคาร์ทีเซียน"||$mess == "024"){
       #หน้าที่8-12
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
@@ -461,7 +465,7 @@ else if($mess == "สมบัติของความน่าจะเป�
 ";
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "ชนิดของเซต"){
+else if($mess == "ชนิดของเซต"||$mess == "021"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "1. เซตจำกัด เช่น {1, 2, 3, ..., 100} 
@@ -470,7 +474,7 @@ else if($mess == "ชนิดของเซต"){
 4. เอกภพสมพัทธ์ (μ) คอ เซตที่ประกอบด้วยสมาชิกทั้งหมด ของสิ่งที่เรําต้องการ";
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "การเขียนเซต"){
+else if($mess == "การเขียนเซต"||$mess == "022"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "1. เขียนแบบแจกแจงสมาชิก (Tubular form) มีหลักการเขียน ดังนี้
@@ -481,7 +485,7 @@ else if($mess == "การเขียนเซต"){
 ";
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "การยูเนียน"){
+else if($mess == "การยูเนียน"||$mess == "0251"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $image_url="https://still-oasis-33130.herokuapp.com/ada5.jpg";
        $arrayPostData['messages'][0]['type'] = "image";
@@ -489,7 +493,7 @@ else if($mess == "การยูเนียน"){
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "การอินเตอร์เซคชัน"){
+else if($mess == "การอินเตอร์เซคชัน"||$mess == "0252"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $image_url="https://still-oasis-33130.herokuapp.com/ada6.jpg";
        $arrayPostData['messages'][0]['type'] = "image";
@@ -497,7 +501,7 @@ else if($mess == "การอินเตอร์เซคชัน"){
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "ผลต่างเซต"){
+else if($mess == "ผลต่างเซต"||$mess == "0253"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
      $image_url="https://still-oasis-33130.herokuapp.com/ada7.jpg";
        $arrayPostData['messages'][0]['type'] = "image";
@@ -505,7 +509,7 @@ else if($mess == "ผลต่างเซต"){
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "การคอมพลีเมนท์"){
+else if($mess == "การคอมพลีเมนท์"||$mess == "0254"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $image_url="https://still-oasis-33130.herokuapp.com/ada8.jpg";
        $arrayPostData['messages'][0]['type'] = "image";
@@ -513,7 +517,7 @@ else if($mess == "การคอมพลีเมนท์"){
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "พาวเวอร์เซต"||$mess == "เซตกำลัง"){
+else if($mess == "พาวเวอร์เซต"||$mess == "เซตกำลัง"||$mess == "0255"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "P(A) = {สบเซตทงหมดของ A} 
@@ -526,7 +530,7 @@ else if($mess == "พาวเวอร์เซต"||$mess == "เซตกำ�
 ดังนั้น จำนวนสมาชิกที่ต่ำที่สุดของพาวเวอร์เซตคือ P(A) = 20 = 1 = ∅";
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "การโอเปอเรชั่น"){
+else if($mess == "การโอเปอเรชั่น"||$mess == "025"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $image_url="https://still-oasis-33130.herokuapp.com/Operation.png";
        $arrayPostData['messages'][0]['type'] = "image";
@@ -534,7 +538,7 @@ else if($mess == "การโอเปอเรชั่น"){
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
- else if($mess == "สูตรลดทอน"){
+ else if($mess == "สูตรลดทอน"||$mess == "0256"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $image_url="https://still-oasis-33130.herokuapp.com/ton.png";
        $arrayPostData['messages'][0]['type'] = "image";
@@ -542,7 +546,7 @@ else if($mess == "การโอเปอเรชั่น"){
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "สูตรจำนวนสมาชิกของเซต"){
+else if($mess == "สูตรจำนวนสมาชิกของเซต"||$mess == "026"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 	$image_url="https://still-oasis-33130.herokuapp.com/sett.png";
 	 $arrayPostData['messages'][0]['type'] = "image";
@@ -550,7 +554,7 @@ else if($mess == "สูตรจำนวนสมาชิกของเซ�
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
 replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "แผนภาพเวนส์-ออยเลอร์"){
+else if($mess == "แผนภาพเวนส์-ออยเลอร์"||$mess == "027"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 	$image_url="https://still-oasis-33130.herokuapp.com/allvein.png";
 	 $arrayPostData['messages'][0]['type'] = "image";
