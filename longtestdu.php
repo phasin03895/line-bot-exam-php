@@ -26,7 +26,7 @@
     else if($message=="menu" || $message == "เมนู"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
-        $arrayPostData['messages'][0]['text'] = "01 ระบนวนจริง
+        $arrayPostData['messages'][0]['text'] = "01 ระบบนวนจริง
 02  เซต
 03  เลขยกกำลัง
 04  ฟังก์ชั่น
@@ -78,17 +78,20 @@
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "เลขยกกำลัง
--สมบัติของเลขยกกำลัง
--สมบัติของรากที่ n ";
+031 สมบัติของเลขยกกำลัง
+032 ผลต่างกำลังสอง";
         replyMsg($arrayHeader,$arrayPostData);
       }
       else if($mess == "04"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ฟังก์ชั่น
--ผลคูณคาร์ทีเชียน
--ฟังก์ชั่น
--สมบัติของพาราโบลา";
+024 ผลคูณคาร์ทีเชียน
+042 ฟังก์ชั่นเชิงเส้น
+043 สมบัติของพาราโบลา
+044 ฟังก์่ชั่นค่าสัมบูรณ์
+045 ฟังก์ชั่นเอกซ์โพเนนเชียล
+046 ฟังก์ชั่นกำลังสอง";
         replyMsg($arrayHeader,$arrayPostData);
       }
       else if($mess == "05"){
@@ -374,7 +377,7 @@ r2 = {(x,y) ∈ R×R | x = y2} ไม่เป็นฟังก์ชั่น
       replyMsg($arrayHeader,$arrayPostData);
 }
 
-else if($mess == "ฟังก์ชั่นเชิงเส้น"){
+else if($mess == "ฟังก์ชั่นเชิงเส้น"||$mess == "042"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = " y = f(x) = ax + b \nเมื่อ a,b ∈ R และ a ≠ 0";
@@ -412,7 +415,7 @@ else if($mess == "ทฤษฏีบทพีธาโกรัส"){
 พจน์ที่ n ของลำดับเรขาคณิต คือ an = a1r((n−1))";
       replyMsg($arrayHeader,$arrayPostData);
 }
-    else if($mess == "สมบัติของพาราโบลา"){
+    else if($mess == "สมบัติของพาราโบลา"||$mess == "043"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "1.จุดยอด (vertex) หรือ จุดวกกลับ (turning point) หาได้จาก V = (-(b/2a),((4ac-(b^2))/4a)
@@ -562,7 +565,7 @@ else if($mess == "แผนภาพเวนส์-ออยเลอร์"||$
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
 	replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "สมบัติของเลขยกกำลัง"){
+else if($mess == "สมบัติของเลขยกกำลัง"||$mess == "031"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 	$image_url="https://still-oasis-33130.herokuapp.com/power.png";
 	 $arrayPostData['messages'][0]['type'] = "image";
@@ -570,7 +573,7 @@ else if($mess == "สมบัติของเลขยกกำลัง"){
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;	
 	replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess =="ผลต่างกําลังสอง"){
+else if($mess =="ผลต่างกําลังสอง"||$mess == "032"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 	$image_url="https://still-oasis-33130.herokuapp.com/powertwo.png";
 	 $arrayPostData['messages'][0]['type'] = "image";
@@ -667,7 +670,7 @@ else if($mess == "การวัดตำแหน่งข้อมูล"){
       $arrayPostData['messages'][3]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "ฟังก์ชั่นค่าสัมบูรณ์"){
+else if($mess == "ฟังก์ชั่นค่าสัมบูรณ์"||$mess == "044"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 	$arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "y = |x – h| + k \nเมื่อ a, c เป็นจำนวนจริง \nโดยมี (h, k) เป็นจุดยอด";
@@ -677,7 +680,7 @@ else if($mess == "ฟังก์ชั่นค่าสัมบูรณ์")
       $arrayPostData['messages'][1]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "ฟังก์ชั่นเอกซ์โพเนนเชียล"){
+else if($mess == "ฟังก์ชั่นเอกซ์โพเนนเชียล"||$mess == "045"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 	$arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "f = {(x,y) ∈ R×R+ | y = ax, a > 0, a ≠ 1}";
@@ -700,7 +703,7 @@ a +b +2√ab = x +2√y
 ";
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "ฟังก์ชั่นกำลังสอง"){
+else if($mess == "ฟังก์ชั่นกำลังสอง"||$mess == "046"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 	$arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = " y = ax2 + bx + c เมื่อ a ≠ 0 \nและ y = a((x-h)^2)+k เป็นกราฟพาราโบลา \nแบ่งเป็น 2 ชนิด";
