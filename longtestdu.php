@@ -213,7 +213,7 @@
       $arrayPostData['messages'][3]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
     }
-    else if($mess == "อัตราส่วนตรีโกณมิติ"){
+    else if($mess == "อัตราส่วนตรีโกณมิติ"|| $message == "051"){
       $image_url ="https://still-oasis-33130.herokuapp.com/pi.png";
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
@@ -242,7 +242,7 @@ $image_url="https://still-oasis-33130.herokuapp.com/pita.png";
       $arrayPostData['messages'][3]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
     }
-  else if($mess == "มุมติดลบตรีโกณมิติ"){
+  else if($mess == "มุมติดลบตรีโกณมิติ"|| $message == "052"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "sin (-θ) = -sin θ \ncos (-θ) = cos θ  \ntan (-θ) = -tan θ";
