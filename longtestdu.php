@@ -121,20 +121,20 @@ else if($mess == "07"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ความน่าจะเป็น
--กฏการนับเบื้องต้น
--แฟคทอเรียล
--การสับเปลี่ยน
--สมบัติของการจัดหมู่
--ความน่าจะเป็น";
+071 กฏการนับเบื้องต้น
+072 แฟคทอเรียล
+073 การสับเปลี่ยน
+074 สมบัติของการจัดหมู่
+075 ความน่าจะเป็น";
         replyMsg($arrayHeader,$arrayPostData);
       }
 else if($mess == "08"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "สถิติ
--การหาค่ากลางข้อมูล
--การวัดตำแหน่งของข้อมูล
--การวัดหการกระจายของข้อมูล";
+081 การหาค่ากลางข้อมูล
+082 การวัดตำแหน่งของข้อมูล
+083 การวัดหการกระจายของข้อมูล";
         replyMsg($arrayHeader,$arrayPostData);
       }
 else if($mess == "ระบบจำนวนจริง"||$mess == "011"){
@@ -569,7 +569,7 @@ else if($mess =="ผลต่างกําลังสอง"||$mess == "032")
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
 	replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "แฟคทอเรียล"){
+else if($mess == "แฟคทอเรียล"||$mess == "072"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 	$image_url="https://still-oasis-33130.herokuapp.com/ada9.jpg";
 	 $arrayPostData['messages'][0]['type'] = "image";
@@ -577,7 +577,7 @@ else if($mess == "แฟคทอเรียล"){
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "การสับเปลี่ยนเชิงเส้น"){
+else if($mess == "การสับเปลี่ยนเชิงเส้น"||$mess == "0731"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 	$image_url="https://still-oasis-33130.herokuapp.com/ada10.jpg";
 	 $arrayPostData['messages'][0]['type'] = "image";
@@ -586,7 +586,7 @@ else if($mess == "การสับเปลี่ยนเชิงเส้�
       replyMsg($arrayHeader,$arrayPostData);
 }
 
-else if($mess == "การสับเปลี่ยนแบบวงกลม"){
+else if($mess == "การสับเปลี่ยนแบบวงกลม"||$mess == "0732"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 	$image_url="https://still-oasis-33130.herokuapp.com/ada11.jpg";
 	 $arrayPostData['messages'][0]['type'] = "image";
@@ -610,7 +610,7 @@ else if($mess == "การเปลี่ยนลําดับ"){
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "สมบัติของการจัดหมู่"){
+else if($mess == "สมบัติของการจัดหมู่"||$mess == "074"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 	$image_url="https://still-oasis-33130.herokuapp.com/ada14.jpg";
 	 $arrayPostData['messages'][0]['type'] = "image";
@@ -618,7 +618,7 @@ else if($mess == "สมบัติของการจัดหมู่"){
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "การวัดการกระจายข้อมูล"){
+else if($mess == "การวัดการกระจายข้อมูล"||$mess == "083"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 	$image_url="https://still-oasis-33130.herokuapp.com/ada15.jpg";
 	 $arrayPostData['messages'][0]['type'] = "image";
@@ -626,7 +626,7 @@ else if($mess == "การวัดการกระจายข้อมู�
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "การหาค่ากลางข้อมูล"){
+else if($mess == "การหาค่ากลางข้อมูล"||$mess == "081"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 	$arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "1.ข้อมูลไม่แจกแจงความถี่";
@@ -642,7 +642,7 @@ else if($mess == "การหาค่ากลางข้อมูล"){
       $arrayPostData['messages'][3]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "การวัดตำแหน่งข้อมูล"){
+else if($mess == "การวัดตำแหน่งข้อมูล"||$mess == "082"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 	$arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "1.ข้อมูลไม่แจกแจงความถี่";
