@@ -98,11 +98,9 @@ else if($mess == "05"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "อัตราส่วนตรีโกณมิติ
--พิจารณาสามเหลี่ยม ABC
--อัตรส่วนของความยาวด้านต่างๆ
--การยุบมุมที่ติดลบ
--ทฤษฏีบทพีธาโกรัส
--อัตราส่วนตรีโกณมิติที่ควรทราบ
+051 อัตราส่วนตรีโกณมิติ
+052 การแปลงมุมที่ติดลบ
+053 ทฤษฏีบทพีธาโกรัส
 ";
         replyMsg($arrayHeader,$arrayPostData);
       }
@@ -383,7 +381,7 @@ else if($mess == "ฟังก์ชั่นเชิงเส้น"||$mess ==
       $arrayPostData['messages'][0]['text'] = " y = f(x) = ax + b \nเมื่อ a,b ∈ R และ a ≠ 0";
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "ทฤษฏีบทพีธาโกรัส"){
+else if($mess == "ทฤษฏีบทพีธาโกรัส"||$mess == "053"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "ให ้ ABC เป็นสํามเหลี่ยมมุมฉาก และ A,B,Cเป็นความยาวด้านแต่ละด้านดังรูป
@@ -579,7 +577,7 @@ else if($mess == "แฟคทอเรียล"){
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
-	    else if($mess == "การสับเปลี่ยนเชิงเส้น"){
+else if($mess == "การสับเปลี่ยนเชิงเส้น"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
 	$image_url="https://still-oasis-33130.herokuapp.com/ada10.jpg";
 	 $arrayPostData['messages'][0]['type'] = "image";
