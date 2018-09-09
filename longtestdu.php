@@ -165,41 +165,41 @@ else if($mess == "กฎรวมแก็ส"){
       $arrayPostData['messages'][0]['text'] = "P1V1/T1 = P2V2/T2";
       replyMsg($arrayHeader,$arrayPostData);
     }
-else if($message == "การขยายตัวของของแข็ง"){
+else if($mess == "การขยายตัวของของแข็ง"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "ΔL = L0αΔT\n ΔA = P0ɣΔT\n ΔV = V0βΔT";
       replyMsg($arrayHeader,$arrayPostData);
     }
-else if($message == "อุณหพลศาสตร์"){
+else if($mess == "อุณหพลศาสตร์"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "Q = McΔt\n Q = mL ";
       replyMsg($arrayHeader,$arrayPostData);
     }
     #ตัวอย่าง Message Type "Sticker"
-else if($message == "ฝันดี"){
+else if($mess == "ฝันดี"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
         $arrayPostData['messages'][0]['type'] = "sticker";
         $arrayPostData['messages'][0]['packageId'] = "2";
         $arrayPostData['messages'][0]['stickerId'] = "46";
         replyMsg($arrayHeader,$arrayPostData);
     }
-else if($message == "การเท่ากันของจำนวนจริง" ||$mess == "013"|| $message == "การเท่ากันของระบบจำนวนจริง"){
+else if($mess == "การเท่ากันของจำนวนจริง" ||$mess == "013"|| $mess == "การเท่ากันของระบบจำนวนจริง"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "สมบัติการเท่ากันในระบบจำนวนจริง มีดังนี้\n1.สมบัติการสะท้อน \n\ta = a \n2.สมบัติสมมาตร \n\tถ้า a=b แล้ว b = a \n3.สมบัติการถ่ายทอด\n\tถ้า a = b และ b = c แล้ว a = c
 4.สมบัติการบวกด้วยจำนวนที่เท่ากัน\n\tถ้า a = b แล้ว a + c = b + c \n5.สมบัติการคูณด้วยจำนวนที่เท่ากัน\n\tถ้า a = b และ c ≠ 0 แล้ว ac = bc";
       replyMsg($arrayHeader,$arrayPostData);
     }
-else if($message == "การแก้สมการพหุนาม" ||$mess == "014"|| $message == "การแก้สมการพหุนามตัวแปรเดียว" || $message == "การแก้สมการ"){
+else if($mess == "การแก้สมการพหุนาม" ||$mess == "014"|| $mess == "การแก้สมการพหุนามตัวแปรเดียว" || $mess == "การแก้สมการ"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "1. การแยกตัวประกอบ \n2. หาจากสูตร x = (−b±√(b^2−4ac))/2a
 3. ทฤษฏีบทเศษเหลือ \n\t3.1. ทฤษฏีบทเศษเหลือ กล่าวว่า “ถ้าหารพหุนาม P(x) ด้วย x − a เมื่อ a เป็นจำนวนจริงแล้วเศษจากการหารจะเทำ่กับ P(a)” \n\t3.2. ทฤษฏีตัวประกอบ (factor theorem) กำหนดพหุนาม P(x) และ a เป็นจำนวนจริงใดๆ แล้ว \n\t\t3.2.1 ถ้า x − a เป็นตัวประกอบของ P(x) แลว้ P(a) = 0 \n\t\t3.2.2 ถ้า P(a) = 0 แล้ว x - a จะเป็นตัวประกอบของ P(x) \n\t\t3.2.3 พอได ้a จากข้อ 3.2.2 ก็นำไปหารสังเคราะห์";
       replyMsg($arrayHeader,$arrayPostData);
     }
-else if($message == "ค่าสัมบูรณ์"||$mess == "015"){
+else if($mess == "ค่าสัมบูรณ์"||$mess == "015"){
       $image_url ="https://still-oasis-33130.herokuapp.com/014.PNG";
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
@@ -213,7 +213,7 @@ else if($message == "ค่าสัมบูรณ์"||$mess == "015"){
       $arrayPostData['messages'][3]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
     }
-else if($mess == "อัตราส่วนตรีโกณมิติ"|| $message == "051"){
+else if($mess == "อัตราส่วนตรีโกณมิติ"|| $mess == "051"){
       $image_url ="https://still-oasis-33130.herokuapp.com/pi.png";
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
@@ -242,7 +242,7 @@ $image_url="https://still-oasis-33130.herokuapp.com/pita.png";
       $arrayPostData['messages'][3]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
     }
-else if($mess == "มุมติดลบตรีโกณมิติ"|| $message == "052"){
+else if($mess == "มุมติดลบตรีโกณมิติ"|| $mess == "052"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $arrayPostData['messages'][0]['type'] = "text";
       $arrayPostData['messages'][0]['text'] = "sin (-θ) = -sin θ \ncos (-θ) = cos θ  \ntan (-θ) = -tan θ";
