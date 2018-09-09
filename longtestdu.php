@@ -109,8 +109,9 @@ else if($mess == "06"){
         $arrayPostData['messages'][0]['type'] = "text";
         $arrayPostData['messages'][0]['text'] = "ลำดับและอนุกรม
  -ลำดับเลขคณิต
--ลำเรขาคณิต
--สมบัติของซิกมา
+-ลำดับเรขาคณิต
+063 สมบัติของซิกมา
+-----0631 สูตรผลบวกของซิกมา
 -สูตรผลบวกสำคัญ
 -ผลบวกของ n พจน์แรกของอนุกรม
 -อนุกรมเลขคณติ
@@ -123,7 +124,9 @@ else if($mess == "07"){
         $arrayPostData['messages'][0]['text'] = "ความน่าจะเป็น
 071 กฏการนับเบื้องต้น
 072 แฟคทอเรียล
-073 การสับเปลี่ยน
+--- การสับเปลี่ยน
+-----0731 การสับเปลี่ยนเชิงเส้น
+-----0732 การสับเปลี่ยนเชิงวงกลม
 074 สมบัติของการจัดหมู่
 075 ความน่าจะเป็น";
         replyMsg($arrayHeader,$arrayPostData);
@@ -415,7 +418,7 @@ else if($mess == "ลำดับและอนุกรม"){
 
  replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "สมบัติของซิกมา"){
+else if($mess == "สมบัติของซิกมา"||$mess == "063"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $image_url="https://still-oasis-33130.herokuapp.com/ada1.jpg";
        $arrayPostData['messages'][0]['type'] = "image";
@@ -423,7 +426,7 @@ else if($mess == "สมบัติของซิกมา"){
       $arrayPostData['messages'][0]['previewImageUrl'] = $image_url;
       replyMsg($arrayHeader,$arrayPostData);
 }
-else if($mess == "สูตรผลบวกของซิกมา"){
+else if($mess == "สูตรผลบวกของซิกมา"||$mess == "0631"){
       $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
       $image_url="https://still-oasis-33130.herokuapp.com/ada2.jpg";
        $arrayPostData['messages'][0]['type'] = "image";
